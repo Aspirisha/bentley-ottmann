@@ -183,7 +183,8 @@ int main() {
                     _Q.push_back(Q.top());
                     Q.pop();
                 }
-                Q.pop();
+                if (!Q.empty())
+                    Q.pop();
                 vector<Event>::iterator itr = _Q.begin();
                 while (itr != _Q.end()) {
                     Q.push(*itr);
